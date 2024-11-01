@@ -1,0 +1,330 @@
+{
+  "name": "Catalog",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "category",
+      "items": [
+        {
+          "type": "http",
+          "name": "Inserir uma nova categoria",
+          "seq": 3,
+          "request": {
+            "url": "{{host}}/categories",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\":\"Devs\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Listar todas categorias",
+          "seq": 1,
+          "request": {
+            "url": "{{host}}/categories",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Obter uma categoria pelo id",
+          "seq": 2,
+          "request": {
+            "url": "{{host}}/categories/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update categoria",
+          "seq": 4,
+          "request": {
+            "url": "{{host}}/categories/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\":\"Categoria update\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Deletar categoria pelo id",
+          "seq": 5,
+          "request": {
+            "url": "{{host}}/categories/4",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "products",
+      "items": [
+        {
+          "type": "http",
+          "name": "Obter uma produto pelo id",
+          "seq": 2,
+          "request": {
+            "url": "{{host}}/products/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Listar todos produtos",
+          "seq": 1,
+          "request": {
+            "url": "{{host}}/products",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update produto",
+          "seq": 4,
+          "request": {
+            "url": "{{host}}/products/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\":\"Show do the Rock\",\n  \"description\":\"The Rock is better\",\n  \"price\":5000,\n  \"imgUrl\":\"localhost/image\",\n  \"date\":\"2024-10-25T19:44:00.00+03:00\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Inserir uma novo produto",
+          "seq": 3,
+          "request": {
+            "url": "{{host}}/products",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\":\"Devs\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Deletar produto pelo id",
+          "seq": 5,
+          "request": {
+            "url": "{{host}}/products/4",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "categorias por página",
+      "seq": 2,
+      "request": {
+        "url": "{{host}}/categories?page=0&size=12&sort=name,asc",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "page",
+            "value": "0",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "size",
+            "value": "12",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "sort",
+            "value": "name,asc",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    }
+  ],
+  "activeEnvironmentUid": "8PGNp25cLDJvXslIqGa1A",
+  "environments": [
+    {
+      "variables": [
+        {
+          "name": "host",
+          "value": "http://localhost:8080",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "catalog_env"
+    },
+    {
+      "variables": [
+        {
+          "name": "host",
+          "value": "http://localhost:8080",
+          "enabled": true,
+          "secret": false,
+          "type": "text"
+        }
+      ],
+      "name": "Catalogo"
+    }
+  ],
+  "brunoConfig": {
+    "version": "1",
+    "name": "Catalog",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}
